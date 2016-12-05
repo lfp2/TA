@@ -18,6 +18,7 @@ class SituationStudentPage extends Page{
         if( color == "verde" && $('.green').attr('id').equals(x)){
             return true
         }
+
         if(color == "vermelho" && $('.red').attr('id').equals(x)){
             return true
         }
