@@ -12,18 +12,14 @@ class SituationStudentPage extends Page{
         //title ==~ /Create property Listagem/
     }
 
-    boolean mediaVerde(aluno, conceito){
+    boolean media(aluno, conceito, color){
         def x = aluno + "+" + conceito
         assert $("td", id:x)!= null
-        if( $('.green').attr('id').equals(x)){
+        if( color == "verde" && $('.green').attr('id').equals(x)){
             return true
         }
-    }
 
-    boolean mediaVermelha(aluno, conceito){
-        def x = aluno + "+" + conceito
-        assert $("td", id:x)!= null
-        if( $('.red').attr('id').equals(x)){
+        if(color == "vermelho" && $('.red').attr('id').equals(x)){
             return true
         }
     }
